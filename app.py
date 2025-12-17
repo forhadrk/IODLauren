@@ -77,7 +77,8 @@ data = data[feature_names]
 # --------------------------------------
 if st.button("Predict Readmission Risk"):
     pred = model.predict_proba(data)[0][1]
-    st.subheader(f"🔮 Predicted Probability of 30-Day Readmission: **{pred:.2%}**")
+    #st.subheader(f"🔮 Predicted Probability of 30-Day Readmission: **{pred:.2%}**")
+    st.subheader(f"🔮 Predicted Probability of 30-Day Readmission: **{pred}**")
 
     if pred < 0.20:
         st.success("Low risk patient. 👍")
