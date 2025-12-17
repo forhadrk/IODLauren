@@ -80,7 +80,7 @@ if st.button("Predict Readmission Risk"):
     #st.subheader(f"🔮 Predicted Probability of 30-Day Readmission: **{pred:.2%}**")
     st.subheader(f"🔮 Predicted Probability of 30-Day Readmission: **{pred}**")
 
-    if pred < 0.20:
+    if pred < 0.04:
         st.success("Low risk patient. 👍")
     elif pred < 0.45:
         st.warning("Moderate risk patient. ⚠️")
